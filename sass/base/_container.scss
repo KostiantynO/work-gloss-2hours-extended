@@ -1,0 +1,17 @@
+.container {
+  // contain: content;
+  // overflow-x: hidden;
+
+  @include paddings($pr: 20px, $pl: 20px);
+  @include mq($mobile, $mr: auto, $ml: auto) {
+    max-width: map-get($breakpoints, 'tablet-container');
+  }
+
+  @include mq($tablet) {
+    max-width: map-get($breakpoints, $tablet);
+  }
+
+  @include mq($laptop, $pr: 27px, $pl: 27px) {
+    max-width: map-get($breakpoints, $desktop);
+  }
+}

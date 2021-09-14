@@ -1,0 +1,22 @@
+:root {
+  --body-sans-serif: 'Montserrat', sans-serif;
+  --brand-sans-serif: 'Cuprum', sans-serif;
+
+  --color-text-primary: #1a202c;
+  --color-accent: #ffd324;
+  --color-white: #ffffff; // --color3
+  --color-discount: #ff1b1b;
+  --color-old-price: #bcbdbb;
+  --color-brand: #ffd001; // --color4
+
+  // Transitions
+  --time: 250ms;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+$color-accent: #ffd324;
+
+$fs-montserrat: 24px;
+$fs-proxima-nova: 24px;
+
+$precision: (10 * 3);

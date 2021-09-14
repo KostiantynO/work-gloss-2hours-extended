@@ -1,0 +1,10 @@
+.top-nav__phones {
+  margin-right: 80px;
+}
+
+.phones {
+  @include mq($mobile) {
+    display: flex;
+    align-items: center;
+  }
+}

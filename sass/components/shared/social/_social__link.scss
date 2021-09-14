@@ -1,0 +1,9 @@
+.social__link {
+  @include transition;
+  transition-property: color;
+
+  &:focus,
+  &:hover {
+    color: darken(#44c697, 1);
+  }
+}

@@ -1,0 +1,15 @@
+/* Замовте консультацію */
+.consultancy__heading {
+  margin-bottom: 30px;
+  @include fz(34px, 700, 1.25); /* 36 sp • H3 Headline  lh: 45px */
+  color: var(--color-text-primary); /* color4 */
+}
+
+.consultancy__text {
+  width: 395px;
+  letter-spacing: -1px; // change for Proxima Nova to normal.
+
+  &--bold {
+    letter-spacing: normal;
+  }
+}

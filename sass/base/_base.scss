@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  @extend %list;
+}
+
+a {
+  @extend %link;
+}
+
+img {
+  @extend %img;
+}
+
+button {
+  cursor: pointer;
+}

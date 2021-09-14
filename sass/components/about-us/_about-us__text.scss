@@ -1,0 +1,13 @@
+.about-us__text {
+  @include fz(18px, null, 1.25);
+}
+
+.about-us__text:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.about-us__first-word {
+  font-weight: 700;
+  color: var(--color-accent); /* color3 */
+  text-transform: uppercase;
+}

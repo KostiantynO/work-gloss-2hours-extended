@@ -1,0 +1,13 @@
+.goods-filter__list {
+  @include mq($mobile) {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.goods-filter__item {
+  &:not(:last-child) {
+    @include mq(null, $mobile, null, auto, 20px, auto);
+  }
+}

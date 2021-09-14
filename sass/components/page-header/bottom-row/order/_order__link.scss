@@ -1,0 +1,11 @@
+.order__link {
+  margin-right: 30px;
+
+  @include transition;
+  transition-property: color;
+
+  &:focus,
+  &:hover {
+    color: darken(#44c697, 1);
+  }
+}

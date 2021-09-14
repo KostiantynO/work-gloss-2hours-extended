@@ -1,0 +1,29 @@
+/* Rectangle 138 */
+
+.hero-wrapper {
+  position: relative;
+
+  max-width: 694px;
+  padding: (122px + 132px) 74px 101px 75px;
+
+  text-align: center;
+
+  /* Rectangle 139 */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 15px;
+    height: 100%;
+
+    background: var(--color-accent); /* color3 */
+  }
+
+  &__primary-btn {
+    margin-bottom: 50px;
+  }
+}

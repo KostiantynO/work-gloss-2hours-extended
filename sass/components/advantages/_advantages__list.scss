@@ -1,0 +1,24 @@
+.advantages__list {
+  position: relative;
+  @include mq($mobile, $mt: -30px, $ml: -30px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.advantages__item {
+  flex-grow: 1;
+  @include mq($mobile, $mt: 30px, $ml: 30px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+
+  &.is-hidden {
+    position: absolute;
+    top: 50%;
+    left: 210%;
+  }
+
+  transition-property: transform, opacity;
+  @include transition;
+}

@@ -1,0 +1,10 @@
+.order__cart {
+  @include mq($mobile) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.order__svg {
+  margin-right: 5px;
+}

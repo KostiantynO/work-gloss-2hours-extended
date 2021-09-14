@@ -1,0 +1,6 @@
+.social {
+  @include mq($mobile, $mr: 50px) {
+    display: flex;
+    align-items: center;
+  }
+}

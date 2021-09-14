@@ -1,0 +1,9 @@
+.order__svg {
+  @include transition;
+  transition-property: fill;
+
+  .order__link:focus &,
+  .order__link:hover & {
+    fill: currentColor;
+  }
+}

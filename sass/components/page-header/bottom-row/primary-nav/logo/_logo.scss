@@ -1,0 +1,50 @@
+.page-footer__logo {
+  margin-bottom: 50px;
+}
+
+.logo {
+  @include mq($mobile) {
+    display: flex;
+    align-items: center;
+  }
+
+  @include transition;
+  transition-property: color;
+
+  &--inverted {
+    color: var(--color-white);
+  }
+
+  &:focus,
+  &:hover {
+    color: darken(#44c697, 1);
+  }
+
+  /* Furniture.test */
+  &__desc {
+    max-width: 220px;
+    contain: content;
+    height: 45px;
+
+    /* 36 sp • H3 Headline */
+    @include fz(33px, 700, 1.25, -1.3px);
+    // Proxima Nova, normal, 700, 36px, 1.25  to Montserrat 33px, ls 0.
+
+    &::first-letter {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.logo__svg {
+  margin-right: 15px;
+
+  @include transition;
+  transition-property: fill;
+
+  &--white,
+  .logo:focus &,
+  .logo:hover & {
+    fill: currentColor;
+  }
+}

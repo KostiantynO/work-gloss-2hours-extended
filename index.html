@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Пекарня</title>
+  </head>
+  <body>
+    <header class="page-header" id="top">
+      <div class="container page-header__container">
+        <nav class="top-nav page-header__top-nav">
+          <a class="logo page-header__logo" href="./">
+            <svg class="logo__svg" width="114" height="112">
+              <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+
+            <svg class="page-header__logo-desc" width="173" height="28">
+              <use href="./img/sprite.svg#icon-logo-bakery"></use>
+            </svg>
+          </a>
+
+          <div class="phones top-nav__phones">
+            <ul class="phones__list">
+              <li class="phones__item">
+                <a class="phones__link" href="tel:0999999999">(099) 999-99-99</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="top-nav__list">
+            <li class="top-nav__item">
+              <a class="top-nav__link top-nav__link--current" href="#">Про компанію</a>
+            </li>
+
+            <li class="top-nav__item">
+              <a class="top-nav__link" href="#">Чому ми?</a>
+            </li>
+
+            <li class="top-nav__item">
+              <a class="top-nav__link" href="#">Робота в компанії</a>
+            </li>
+
+            <li class="top-nav__item">
+              <a class="top-nav__link" href="#">Контакти</a>
+            </li>
+          </ul>
+
+          <button class="primary-btn" type="button">
+            <span class="primary-btn__desc">Асортимент</span>
+
+            <svg class="order__svg" width="24" height="24">
+              <use href="./img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section hero main__hero">
+        <div class="container">
+          <div class="hero-wrapper">
+            <h1 class="hero__title title-h1">Пекарня</h1>
+
+            <h2 class="hero__leading-text">Чудових ідей!</h2>
+            <p class="hero__desc">
+              Найсвіжіша випічка власного виробництва на будь-який смак. <br />
+              Також у нас можна замовити домашні вареники, пельмені, <br />
+              короваї, листове тісто і багато іншого.
+            </p>
+
+            <button class="primary-btn hero-wrapper__primary-btn">
+              <span class="primary-btn__desc">Хочу спробувати!</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-us">
+        <div class="container about-us__container">
+          <h2 class="section__title"><span class="section__title-text">Про нас</span></h2>
+
+          <div class="about-us__content">
+            <div class="about-us__background"></div>
+
+            <div class="about-us__text-wrapper">
+              <p class="about-us__text">
+                <span class="about-us__first-word">"Furniture"</span> – "Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum."
+              </p>
+
+              <p class="about-us__text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."
+              </p>
+
+              <p class="about-us__text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section goods">
+        <div class="container">
+          <h2 class="section__title"><span class="section__title-text">Категорії товарів</span></h2>
+
+          <div class="goods-filter">
+            <ul class="goods-filter__list">
+              <li class="goods-filter__item">
+                <button class="goods-filter__btn" type="button">
+                  <svg class="goods-filter__svg" width="100" height="100">
+                    <use href="./img/sprite.svg#icon-living-room"></use>
+                  </svg>
+
+                  <h3 class="goods-filter__title">Дивани</h3>
+                </button>
+              </li>
+
+              <li class="goods-filter__item">
+                <button class="goods-filter__btn goods-filter__btn--current" type="button">
+                  <svg class="goods-filter__svg" width="100" height="100">
+                    <use href="./img/sprite.svg#icon-bedroom"></use>
+                  </svg>
+
+                  <h3 class="goods-filter__title">Ліжка</h3>
+                </button>
+              </li>
+
+              <li class="goods-filter__item">
+                <button class="goods-filter__btn" type="button">
+                  <svg class="goods-filter__svg" width="100" height="100">
+                    <use href="./img/sprite.svg#icon-armchair"></use>
+                  </svg>
+
+                  <h3 class="goods-filter__title">Крісла</h3>
+                </button>
+              </li>
+
+              <li class="goods-filter__item">
+                <button class="goods-filter__btn" type="button">
+                  <svg class="goods-filter__svg" width="100" height="100">
+                    <use href="./img/sprite.svg#icon-wardrobe-thumb"></use>
+                  </svg>
+
+                  <h3 class="goods-filter__title">Комоди</h3>
+                </button>
+              </li>
+
+              <li class="goods-filter__item">
+                <button class="goods-filter__btn" type="button">
+                  <svg class="goods-filter__svg" width="100" height="100">
+                    <use href="./img/sprite.svg#icon-wardrobe-high"></use>
+                  </svg>
+
+                  <h3 class="goods-filter__title">Шафи</h3>
+                </button>
+              </li>
+
+              <li class="goods-filter__item">
+                <button class="goods-filter__btn" type="button">
+                  <svg class="goods-filter__svg" width="100" height="100">
+                    <use href="./img/sprite.svg#icon-kitchen"></use>
+                  </svg>
+
+                  <h3 class="goods-filter__title">Кухня</h3>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="goods__gallery">
+            <ul class="goods__list">
+              <li class="goods__item">
+                <a class="goods__link" href="#">
+                  <p class="goods__marker goods__marker--new">Новинка</p>
+
+                  <div class="goods__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/assortment/assortment-1.webp,
+                          ./img/assortment/assortment-1@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="goods__image"
+                        srcset="
+                          ./img/assortment/assortment-1.jpg,
+                          ./img/assortment/assortment-1@2x.jpg 2x
+                        "
+                        src="./img/assortment/assortment-1.jpg"
+                        loading="lazy"
+                        alt="Асортимент пекарнi"
+                        decoding="async"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="goods__meta">
+                    <h4 class="goods__name">Асортимент пекарнi</h4>
+                    <h4 class="goods__price">8 999 грн</h4>
+                  </div>
+                </a>
+              </li>
+
+              <li class="goods__item">
+                <a class="goods__link" href="#">
+                  <p class="goods__marker goods__marker--new">Хiт продаж</p>
+
+                  <p class="goods__marker goods__marker--discount">Акція</p>
+
+                  <div class="goods__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/assortment/assortment-2.webp,
+                          ./img/assortment/assortment-2@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="goods__image"
+                        srcset="
+                          ./img/assortment/assortment-2.jpg,
+                          ./img/assortment/assortment-2@2x.jpg 2x
+                        "
+                        src="./img/assortment/assortment-2.jpg"
+                        loading="lazy"
+                        alt="Асортимент пекарнi"
+                        decoding="async"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="goods__meta">
+                    <h4 class="goods__name">Асортимент пекарнi</h4>
+                    <h4 class="goods__price goods__price--current">8 999 грн</h4>
+                    <h4 class="goods__price goods__price--previous">8 999 грн</h4>
+                  </div>
+                </a>
+              </li>
+
+              <li class="goods__item">
+                <a class="goods__link" href="#">
+                  <div class="goods__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/assortment/assortment-3.webp,
+                          ./img/assortment/assortment-3@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="goods__image"
+                        srcset="
+                          ./img/assortment/assortment-3.jpg,
+                          ./img/assortment/assortment-3@2x.jpg 2x
+                        "
+                        src="./img/assortment/assortment-3.jpg"
+                        loading="lazy"
+                        alt="Асортимент пекарнi"
+                        decoding="async"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="goods__meta">
+                    <h4 class="goods__name">Асортимент пекарнi</h4>
+                    <h4 class="goods__price">8 999 грн</h4>
+                  </div>
+                </a>
+              </li>
+
+              <li class="goods__item">
+                <a class="goods__link" href="#">
+                  <p class="goods__marker goods__marker--new">Новинка</p>
+
+                  <div class="goods__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/assortment/assortment-4.webp,
+                          ./img/assortment/assortment-4@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="goods__image"
+                        srcset="
+                          ./img/assortment/assortment-4.jpg,
+                          ./img/assortment/assortment-4@2x.jpg 2x
+                        "
+                        src="./img/assortment/assortment-4.jpg"
+                        loading="lazy"
+                        alt="Асортимент пекарнi"
+                        decoding="async"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="goods__meta">
+                    <h4 class="goods__name">Асортимент пекарнi</h4>
+                    <h4 class="goods__price">8 999 грн</h4>
+                  </div>
+                </a>
+              </li>
+
+              <li class="goods__item">
+                <a class="goods__link" href="#">
+                  <div class="goods__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/assortment/assortment-5.webp,
+                          ./img/assortment/assortment-5@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="goods__image"
+                        srcset="
+                          ./img/assortment/assortment-5.jpg,
+                          ./img/assortment/assortment-5@2x.jpg 2x
+                        "
+                        src="./img/assortment/assortment-5.jpg"
+                        loading="lazy"
+                        alt="Асортимент пекарнi"
+                        decoding="async"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="goods__meta">
+                    <h4 class="goods__name">Асортимент пекарнi</h4>
+                    <h4 class="goods__price">8 999 грн</h4>
+                  </div>
+                </a>
+              </li>
+
+              <li class="goods__item">
+                <a class="goods__link" href="#">
+                  <p class="goods__marker goods__marker--new">Хiт продаж</p>
+
+                  <p class="goods__marker goods__marker--discount">Акція</p>
+
+                  <div class="goods__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/assortment/assortment-6.webp,
+                          ./img/assortment/assortment-6@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="goods__image"
+                        srcset="
+                          ./img/assortment/assortment-6.jpg,
+                          ./img/assortment/assortment-6@2x.jpg 2x
+                        "
+                        src="./img/assortment/assortment-6.jpg"
+                        loading="lazy"
+                        alt="Асортимент пекарнi"
+                        decoding="async"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="goods__meta">
+                    <h4 class="goods__name">Асортимент пекарнi</h4>
+                    <h4 class="goods__price goods__price--current">8 999 грн</h4>
+                    <h4 class="goods__price goods__price--previous">8 999 грн</h4>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="goods__btn-wrapper">
+            <button class="primary-btn goods__catalog-btn">
+              <span class="primary-btn__desc">В каталог</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section advantages">
+        <div class="container">
+          <h2 class="section__title"><span class="section__title-text">Наші переваги</span></h2>
+
+          <div class="advantages__gallery">
+            <ul class="advantages__list">
+              <li class="advantages__item current-slide">
+                <a class="advantages__link" href="#">
+                  <div class="advantages__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/advantages/advantage-1.webp,
+                          ./img/advantages/advantage-1@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="advantages__image"
+                        srcset="
+                          ./img/advantages/advantage-1.jpg,
+                          ./img/advantages/advantage-1@2x.jpg 2x
+                        "
+                        src="./img/advantages/advantage-1.jpg"
+                        loading="lazy"
+                        alt="Високоякісні меблі для великої квартири-студії класу люкс"
+                        decoding="async"
+                        width="586"
+                        height="350"
+                      />
+                    </picture>
+
+                    <div class="advantages__meta">
+                      <h3 class="advantages__title">Меблі преміум класу</h3>
+                      <p class="advantages__desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="advantages__item current-slide">
+                <a class="advantages__link" href="#">
+                  <div class="advantages__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/advantages/advantage-2.webp,
+                          ./img/advantages/advantage-2@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="advantages__image"
+                        srcset="
+                          ./img/advantages/advantage-2.jpg,
+                          ./img/advantages/advantage-2@2x.jpg 2x
+                        "
+                        src="./img/advantages/advantage-2.jpg"
+                        loading="lazy"
+                        alt="Команда людей за столом перемовин у приміщенні iз великими вікнами"
+                        decoding="async"
+                        width="586"
+                        height="350"
+                      />
+                    </picture>
+
+                    <div class="advantages__meta">
+                      <h3 class="advantages__title">Надійність</h3>
+                      <p class="advantages__desc">
+                        За 14 років на ринку меблів для дому ми стали надійними партнерами на ринку
+                        Вінницької області та України
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="advantages__item current-slide">
+                <a class="advantages__link" href="#">
+                  <div class="advantages__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/advantages/advantage-3.webp,
+                          ./img/advantages/advantage-3@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="advantages__image"
+                        srcset="
+                          ./img/advantages/advantage-3.jpg,
+                          ./img/advantages/advantage-3@2x.jpg 2x
+                        "
+                        src="./img/advantages/advantage-3.jpg"
+                        loading="lazy"
+                        alt="Вантажівка із меблями в дорозі, з видом на місто у долині"
+                        decoding="async"
+                        width="586"
+                        height="350"
+                      />
+                    </picture>
+
+                    <div class="advantages__meta">
+                      <h3 class="advantages__title">Безкоштовна доставка</h3>
+                      <p class="advantages__desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
+                        corrupti rerum assumenda sapiente cum eaque aliquam nihil qui sed vel!
+                        Dolorum!
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="advantages__item is-hidden">
+                <a class="advantages__link" href="#">
+                  <div class="advantages__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/advantages/advantage-1.webp,
+                          ./img/advantages/advantage-1@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="advantages__image"
+                        srcset="
+                          ./img/advantages/advantage-1.jpg,
+                          ./img/advantages/advantage-1@2x.jpg 2x
+                        "
+                        src="./img/advantages/advantage-1.jpg"
+                        loading="lazy"
+                        alt="Високоякісні меблі для великої квартири-студії класу люкс"
+                        decoding="async"
+                        width="586"
+                        height="350"
+                      />
+                    </picture>
+
+                    <div class="advantages__meta">
+                      <h3 class="advantages__title">Меблі преміум класу</h3>
+                      <p class="advantages__desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="advantages__item is-hidden">
+                <a class="advantages__link" href="#">
+                  <div class="advantages__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/advantages/advantage-2.webp,
+                          ./img/advantages/advantage-2@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="advantages__image"
+                        srcset="
+                          ./img/advantages/advantage-2.jpg,
+                          ./img/advantages/advantage-2@2x.jpg 2x
+                        "
+                        src="./img/advantages/advantage-2.jpg"
+                        loading="lazy"
+                        alt="Команда людей за столом перемовин у приміщенні iз великими вікнами"
+                        decoding="async"
+                        width="586"
+                        height="350"
+                      />
+                    </picture>
+
+                    <div class="advantages__meta">
+                      <h3 class="advantages__title">Надійність</h3>
+                      <p class="advantages__desc">
+                        За 14 років на ринку меблів для дому ми стали надійними партнерами на ринку
+                        Вінницької області та України
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="advantages__item is-hidden">
+                <a class="advantages__link" href="#">
+                  <div class="advantages__thumb">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./img/advantages/advantage-3.webp,
+                          ./img/advantages/advantage-3@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="advantages__image"
+                        srcset="
+                          ./img/advantages/advantage-3.jpg,
+                          ./img/advantages/advantage-3@2x.jpg 2x
+                        "
+                        src="./img/advantages/advantage-3.jpg"
+                        loading="lazy"
+                        alt="Вантажівка із меблями в дорозі, з видом на місто у долині"
+                        decoding="async"
+                        width="586"
+                        height="350"
+                      />
+                    </picture>
+
+                    <div class="advantages__meta">
+                      <h3 class="advantages__title">Безкоштовна доставка</h3>
+                      <p class="advantages__desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
+                        corrupti rerum assumenda sapiente cum eaque aliquam nihil qui sed vel!
+                        Dolorum!
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <button
+              class="back-btn advantages__back-btn advantages__btn"
+              type="button"
+              aria-label="Попередній слайд"
+            >
+              <svg class="advantages__svg advantages__back-icon" width="30" height="30">
+                <use href="./img/sprite.svg#icon-left"></use>
+              </svg>
+            </button>
+
+            <button
+              class="next-btn advantages__next-btn advantages__btn"
+              type="button"
+              aria-label="Наступний слайд"
+            >
+              <svg class="advantages__svg advantages__next-icon" width="30" height="30">
+                <use href="./img/sprite.svg#icon-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container page-footer__container">
+        <div class="to-top-btn-wrapper">
+          <a href="#top" class="to-top-btn" type="button">
+            <svg class="to-top-btn__svg" width="18" height="18">
+              <use href="./img/sprite.svg#icon-to-top-arrow"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="page-footer__content">
+          <div class="page-footer__background"></div>
+
+          <div class="page-footer__left">
+            <a class="logo logo--inverted page-footer__logo" href="./">
+              <svg class="logo__svg logo__svg--white" width="114" height="112">
+                <use href="./img/sprite.svg#icon-logo"></use>
+              </svg>
+              <span class="logo__desc">Пекарня</span>
+            </a>
+
+            <div class="furniture page-footer__furniture">
+              <ul class="furniture__list page-footer-furniture__list">
+                <li class="furniture__item page-footer-furniture__item">
+                  <div class="furniture__link-wrapper">
+                    <a class="furniture__link furniture__link--inverted" href="#">Дивани</a>
+                  </div>
+                </li>
+
+                <li class="furniture__item page-footer-furniture__item">
+                  <div class="furniture__link-wrapper">
+                    <a class="furniture__link furniture__link--inverted" href="#">Ліжка</a>
+                  </div>
+                </li>
+
+                <li class="furniture__item page-footer-furniture__item">
+                  <div class="furniture__link-wrapper">
+                    <a class="furniture__link furniture__link--inverted" href="#">Крісла</a>
+                  </div>
+                </li>
+
+                <li class="furniture__item page-footer-furniture__item">
+                  <div class="furniture__link-wrapper">
+                    <a class="furniture__link furniture__link--inverted" href="#">Шафи</a>
+                  </div>
+                </li>
+
+                <li class="furniture__item page-footer-furniture__item">
+                  <div class="furniture__link-wrapper">
+                    <a class="furniture__link furniture__link--inverted" href="#">Кухня</a>
+                  </div>
+                </li>
+
+                <li class="furniture__item page-footer-furniture__item">
+                  <div class="furniture__link-wrapper">
+                    <a class="furniture__link furniture__link--inverted" href="#">Комоди</a>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="top-nav__list page-footer-nav__list">
+                <li class="top-nav__item page-footer-nav__item">
+                  <a class="top-nav__link top-nav__link--inverted" href="#0">Акції</a>
+                </li>
+
+                <li class="top-nav__item page-footer-nav__item">
+                  <a class="top-nav__link top-nav__link--inverted" href="#">Доставка та оплата</a>
+                </li>
+
+                <li class="top-nav__item page-footer-nav__item">
+                  <a class="top-nav__link top-nav__link--inverted" href="#">Про нас</a>
+                </li>
+
+                <li class="top-nav__item page-footer-nav__item">
+                  <a class="top-nav__link top-nav__link--inverted" href="#">Контакти</a>
+                </li>
+              </ul>
+
+              <div class="page-footer__contacts-wrapper">
+                <address class="address page-footer__address">
+                  <ul class="address__list">
+                    <li class="address__item">
+                      <a
+                        class="address__link"
+                        rel="noopener noreferrer nofollow"
+                        href="https://goo.gl/maps/NhMhHneALrEVYq1r5"
+                      >
+                        <svg class="address__svg" width="24" height="24">
+                          <use href="./img/sprite.svg#icon-map-pin"></use>
+                        </svg>
+
+                        <span class="address__link-text">TEST</span></a
+                      >
+                    </li>
+
+                    <li class="address__item">
+                      <a class="address__link" rel="noopener noreferrer nofollow" href="#">
+                        <svg class="address__svg" width="24" height="24">
+                          <use href="./img/sprite.svg#icon-calendar"></use>
+                        </svg>
+
+                        <span class="address__link-text">Пн-Пт, з 10 до 18</span>
+                      </a>
+                    </li>
+
+                    <li class="address__item">
+                      <div class="phones address__phones">
+                        <svg
+                          class="phones__svg phones__icon-smartphone address__icon-smartphone"
+                          width="24"
+                          height="24"
+                        >
+                          <use href="./img/sprite.svg#icon-smartphone"></use>
+                        </svg>
+
+                        <ul class="phones__list">
+                          <li class="phones__item address-phones__item">
+                            <a class="phones__link address-phones__link" href="tel:0991112233">
+                              <span class="phones__number">(099) 111 22 33 </span>
+                            </a>
+                          </li>
+
+                          <li class="phones__item address-phones__item">
+                            <a class="phones__link address-phones__link" href="tel:0992223344"
+                              >(099) 222 33 44</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </address>
+
+                <div class="social page-footer__social">
+                  <p class="social__title page-footer__social-title">Ми в соціальних мережах:</p>
+
+                  <ul class="social__list">
+                    <li class="social__item">
+                      <a class="social__link" rel="noopener noreferrer nofollow" href="#">
+                        <svg class="social__svg page-footer__social-svg" width="40" height="40">
+                          <use href="./img/sprite.svg#icon-telegram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" rel="noopener noreferrer nofollow" href="#">
+                        <svg class="social__svg page-footer__social-svg" width="40" height="40">
+                          <use href="./img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" rel="noopener noreferrer nofollow" href="#">
+                        <svg class="social__svg page-footer__social-svg" width="40" height="40">
+                          <use href="./img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-footer__copyright-wrapper">
+              <p class="copyright page-footer__copyright">© ТОВ Furniture, працюємо з 2006 року</p>
+
+              <div class="brand">
+                <svg class="brand__logo" width="20" height="21">
+                  <use href="./img/sprite.svg#icon-brand-gloss"></use>
+                </svg>
+                <p class="brand__desc">Глянець — розробка інтернет-магазинів</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+/* Ліжко Ornella */
+.hero__leading-text {
+  @include mq($mobile, $mb: 10px);
+
+  @include fz(60px, 500, 1.25); // font-family: Blogger Sans;
+
+  text-transform: uppercase;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
+  color: var(--color-accent);
+
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 29px rgba(255, 249, 94, 0.54);
+}

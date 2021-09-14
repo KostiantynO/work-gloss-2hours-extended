@@ -1,0 +1,22 @@
+.main__hero {
+  margin: 0 auto;
+}
+
+.hero {
+  @include mq($mobile) {
+    max-width: map-get($breakpoints, $desktop);
+    min-height: 785px;
+  }
+
+  padding-top: 0;
+
+  background-color: var(--color-text-primary);
+  background-image: url('../img/hero-bg/hero-bg.jpg');
+  background-image: url('../img/hero-bg/hero-bg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include bg-retina('../img/hero-bg/hero-bg@2x.jpg');
+  @include bg-retina('../img/hero-bg/hero-bg@2x.webp');
+}
