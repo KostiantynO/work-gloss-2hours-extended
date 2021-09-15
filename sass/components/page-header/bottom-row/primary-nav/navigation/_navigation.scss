@@ -1,10 +1,10 @@
-.furniture {
+.navigation {
   @include mq($mobile) {
     display: flex;
   }
 }
 
-.page-footer__furniture {
+.page-footer__navigation {
   align-items: baseline;
 
   margin-bottom: auto;

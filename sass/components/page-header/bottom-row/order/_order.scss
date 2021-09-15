@@ -1,6 +1,0 @@
-.order {
-  @include mq($mobile) {
-    display: flex;
-    align-items: center;
-  }
-}

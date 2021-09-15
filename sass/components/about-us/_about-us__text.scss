@@ -1,5 +1,7 @@
+/* Наша пекарня це мережа, яка завойовує серця любителів теплої оригінальної випічки. */
 .about-us__text {
-  @include fz(18px, null, 1.25);
+  /* Desktop • 24 sp • H5 Headline, Proxima Nova, normal, 400, fz24px, lh1.3 */
+  width: 730px;
 }
 
 .about-us__text:not(:last-child) {

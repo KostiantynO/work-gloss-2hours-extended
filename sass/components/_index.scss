@@ -29,46 +29,31 @@
 
 @import './page-header/bottom-row/primary-nav/primary-nav';
 
-@import './page-header/bottom-row/primary-nav/furniture/furniture';
-@import './page-header/bottom-row/primary-nav/furniture/furniture__list';
-@import './page-header/bottom-row/primary-nav/furniture/furniture__link';
-@import './page-header/bottom-row/primary-nav/furniture/furniture__expand-btn';
-@import './page-header/bottom-row/primary-nav/furniture/furniture__svg';
-@import './page-header/bottom-row/primary-nav/furniture/furniture__submenu';
-@import './page-header/bottom-row/primary-nav/furniture/furniture__sublink';
+@import './page-header/bottom-row/primary-nav/navigation/navigation';
+@import './page-header/bottom-row/primary-nav/navigation/navigation__list';
+@import './page-header/bottom-row/primary-nav/navigation/navigation__link';
+@import './page-header/bottom-row/primary-nav/navigation/navigation__expand-btn';
+@import './page-header/bottom-row/primary-nav/navigation/navigation__svg';
+@import './page-header/bottom-row/primary-nav/navigation/navigation__submenu';
+@import './page-header/bottom-row/primary-nav/navigation/navigation__sublink';
 
-@import './page-header/bottom-row/order/order';
-@import './page-header/bottom-row/order/order__link';
-@import './page-header/bottom-row/order/order__cart';
-@import './page-header/bottom-row/order/order__svg';
-@import './page-header/bottom-row/order/order__desc';
 @import './shared/btn/primary-btn';
+@import './page-header/bottom-row/order/order__svg';
 
 // --------------- MAIN ---------------
 // Hero
 @import './hero/hero';
+@import './hero/hero__container';
 @import './hero/hero-wrapper';
 @import './hero/hero__leading-text';
 @import './hero/hero__desc';
 
-// Hero - Slider
-@import './hero/slider/slide-control';
-@import './hero/slider/slide-control__count';
-@import './shared/btn/next-btn';
-@import './hero/slider/slide-control__btn';
-@import './hero/slider/slide-control__svg';
-
-// Advantages
-@import './advantages/advantages';
-@import './advantages/advantages__gallery';
-@import './advantages/advantages__list';
-@import './advantages/advantages__thumb';
-@import './advantages/advantages__image';
-@import './advantages/advantages__meta';
-@import './advantages/advantages__title';
-@import './advantages/advantages__desc';
-@import './advantages/advantages__btn';
-@import './advantages/advantages__svg';
+// About us
+@import './about-us/about-us';
+@import './about-us/about-us__background';
+@import './about-us/about-us__text-wrapper';
+@import './about-us/about-us__title';
+@import './about-us/about-us__text';
 
 // Goods Categories
 // Goods - Filter
@@ -90,12 +75,6 @@
 
 @import './goods/gallery/goods__btn-wrapper';
 
-// About us
-@import './about-us/about-us';
-@import './about-us/about-us__background';
-@import './about-us/about-us__text-wrapper';
-@import './about-us/about-us__text';
-
 // Still have questions?
 @import './consultancy/consultancy';
 @import './consultancy/consultancy__background';
@@ -106,6 +85,18 @@
 @import './consultancy/consultancy__form/consultancy__label';
 @import './consultancy/consultancy__form/consultancy__input';
 @import './consultancy/consultancy__form/consultancy__submit-btn';
+
+// Advantages
+@import './advantages/advantages';
+@import './advantages/advantages__gallery';
+@import './advantages/advantages__list';
+@import './advantages/advantages__thumb';
+@import './advantages/advantages__image';
+@import './advantages/advantages__meta';
+@import './advantages/advantages__title';
+@import './advantages/advantages__desc';
+@import './advantages/advantages__btn';
+@import './advantages/advantages__svg';
 
 // Order now
 @import './order-now/order-now';

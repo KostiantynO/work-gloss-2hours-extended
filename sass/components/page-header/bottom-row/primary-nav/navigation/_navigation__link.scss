@@ -1,4 +1,4 @@
-.furniture__link-wrapper {
+.navigation__link-wrapper {
   @include mq($mobile) {
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
 }
 
 /* Дивани */
-.furniture__link {
+.navigation__link {
   margin-right: 3px;
 
   /* 18 sp • H5 Headline */

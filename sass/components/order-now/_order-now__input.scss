@@ -15,8 +15,6 @@
   /* Леонардо Ді Капріо */
   &::placeholder {
     color: var(--color-white);
-    transition-property: opacity;
-    @include transition;
   }
 
   // &:not(:placeholder-shown)

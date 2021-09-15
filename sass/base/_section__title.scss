@@ -6,16 +6,21 @@
 
   color: var(--color-accent);
   text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 29px rgba(255, 249, 94, 0.54);
 }
 
 // .goods__name { }
 
-/* Категорії товарів */
+/* Про нашу пекарню */
 .section__title {
-  margin-bottom: 50px;
-  /* Montserrat - fs: 44px, lh:1.36; Proxima Nova - 48 sp • H2 Headline, 60 px*/
-  @include fz(44px, 700, 1.36);
+  margin-bottom: 30px;
+
+  font-family: var(--title-sans-serif);
+  @include fz(60px, 500, 1.25); /* Desktop • 60 sp • H2 Headline */
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
   color: var(--color-text-primary);
+  text-transform: uppercase;
 
   transform: translateX(50%);
   transition-property: transform;
@@ -28,17 +33,5 @@
     transform: translateX(-50%);
     transition-property: transform;
     @include transition;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      bottom: 5px;
-      left: -5px;
-      z-index: -1;
-
-      width: 20px;
-      background: var(--color-accent);
-    }
   }
 }

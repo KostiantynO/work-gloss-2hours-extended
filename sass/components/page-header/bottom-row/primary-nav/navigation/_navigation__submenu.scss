@@ -1,4 +1,4 @@
-.furniture__submenu {
+.navigation__submenu {
   position: absolute;
   top: 100%;
   left: -10px;
@@ -20,9 +20,9 @@
   @include transition;
   transition-property: transform, opacity, visibility, background-color;
 
-  .furniture__item:focus-within &,
-  .furniture__item:hover &,
-  .furniture__link:focus + & {
+  .navigation__item:focus-within &,
+  .navigation__item:hover &,
+  .navigation__link:focus + & {
     visibility: visible;
     pointer-events: initial;
     opacity: 1;
@@ -32,7 +32,7 @@
   }
 }
 
-.furniture__subitem {
+.navigation__subitem {
   &:not(:last-child) {
     margin-bottom: 10px;
   }
