@@ -250,7 +250,7 @@ body {
 }
 
 .page-header__logo {
-  margin-right: 195px;
+  margin-right: auto;
 }
 
 .page-footer__logo {
@@ -399,6 +399,7 @@ body {
   .top-nav__list {
     margin-right: 89px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
@@ -412,6 +413,7 @@ body {
 /* Про компанію */
 .top-nav__link {
   position: relative;
+  white-space: nowrap;
   color: var(--color-white);
   font-size: 23px;
   line-height: 31px;

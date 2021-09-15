@@ -1,6 +1,7 @@
 .top-nav__list {
   @include mq($mobile, $mr: 89px) {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
