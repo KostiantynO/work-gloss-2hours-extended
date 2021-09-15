@@ -5,18 +5,19 @@
 .hero {
   @include mq($mobile) {
     max-width: map-get($breakpoints, $desktop);
-    min-height: 785px;
+    min-height: 940px;
+    //  clamp(max-content, 100%, 940px)
   }
 
   padding-top: 0;
 
-  background-color: var(--color-text-primary);
-  background-image: url('../img/hero-bg/hero-bg.jpg');
-  background-image: url('../img/hero-bg/hero-bg.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  $hero-bg-grad: linear-gradient(180deg, #000000 -1.44%, rgba(0, 0, 0, 0) 18.67%),
+    linear-gradient(89.6deg, #000000 0.35%, rgba(0, 0, 0, 0) 50.92%);
 
-  @include bg-retina('../img/hero-bg/hero-bg@2x.jpg');
-  @include bg-retina('../img/hero-bg/hero-bg@2x.webp');
+  background: center/cover no-repeat padding-box var(--color-text-primary);
+  background-image: $hero-bg-grad, url('../img/hero-bg/hero-bg.jpg');
+  background-image: $hero-bg-grad, url('../img/hero-bg/hero-bg.webp');
+
+  @include bg-retina('../img/hero-bg/hero-bg@2x.jpg', $hero-bg-grad);
+  @include bg-retina('../img/hero-bg/hero-bg@2x.webp', $hero-bg-grad);
 }

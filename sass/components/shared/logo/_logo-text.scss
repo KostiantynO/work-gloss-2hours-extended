@@ -1,0 +1,12 @@
+/* ПЕКАРНЯ */
+.logo-text {
+  padding-top: 5px;
+
+  width: 175px;
+  height: 30px;
+
+  font-family: var(--title-sans-serif);
+  @include fz(37px, 700, 1, 4px);
+  color: var(--color-white);
+  text-shadow: 1px 1px 0 var(--color-accent), 2px 2px 0 var(--color-white);
+}

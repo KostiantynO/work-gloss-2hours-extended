@@ -1,7 +1,15 @@
+/* (099) 999-99-99 */
 .phones__link {
   white-space: nowrap;
 
   color: var(--color-white);
+
+  /* Desktop • 34 sp • H4 Headline */
+
+  font-family: var(--title-sans-serif);
+
+  @include fz(34px, 500, 1.25); /* 42px */
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 .phones__sublink {
@@ -15,6 +23,6 @@
 
   &:focus,
   &:hover {
-    color: darken(#44c697, 1);
+    color: darken($color-accent, 2);
   }
 }

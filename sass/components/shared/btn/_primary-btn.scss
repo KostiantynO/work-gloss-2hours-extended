@@ -4,19 +4,21 @@
   align-items: center;
   justify-content: center;
 
+  min-width: 286px;
   max-width: 500px;
   max-height: 55px;
 
   padding: 15px 25px;
 
-  font-family: inherit; /* 18 sp • H5 Headline */
+  font-family: var(--title-sans-serif); /* 18 sp • H5 Headline */
+  @include fz(20px, 500, 1.25);
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
   color: var(--color-text-primary);
-  @include fz($fs-montserrat, 700, 1.25);
   text-overflow: ellipsis;
-  text-transform: uppercase;
   word-wrap: break-word;
 
-  background-color: var(--color-accent); /* color3 */
+  background-color: var(--color-accent);
   border: none;
   border-radius: 30px;
   box-shadow: 0 0 29px rgba(255, 249, 94, 0.54);
@@ -29,6 +31,6 @@
     background-color: darken($color-accent, 10);
   }
 
-  /* Замовити дзвінок */
-  // &__desc {}
+  /* Асортимент */
+  // &__desc { }
 }

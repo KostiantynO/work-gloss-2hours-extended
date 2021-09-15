@@ -9,6 +9,6 @@
 .goods__item {
   flex-grow: 1;
   @include mq($mobile, $mt: 50px, $ml: 30px) {
-    flex-basis: calc(100% / 3 - 30px);
+    flex-basis: calc(100% / 6 - 30px);
   }
 }

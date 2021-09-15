@@ -1,13 +1,12 @@
-/* Ліжко Ornella */
+/* чудових ідей! */
 .hero__leading-text {
-  @include mq($mobile, $mb: 10px);
+  @include mq($mobile, $mb: 30px);
 
-  @include fz(60px, 500, 1.25); // font-family: Blogger Sans;
-
-  text-transform: uppercase;
+  font-family: var(--title-sans-serif);
+  @include fz(60px, 500, 1.25); /* Desktop • 60 sp • H2 Headline */
   font-feature-settings: 'pnum' on, 'lnum' on;
 
   color: var(--color-accent);
-
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 29px rgba(255, 249, 94, 0.54);
+  text-transform: uppercase;
 }

@@ -1,5 +1,0 @@
-.hero__title {
-  @include mq($mobile, $mb: 50px);
-
-  color: var(--color-accent);
-}

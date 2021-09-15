@@ -1,4 +1,6 @@
 .order__svg {
+  margin-left: 10px;
+
   @include transition;
   transition-property: fill;
 

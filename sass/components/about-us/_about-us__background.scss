@@ -9,12 +9,12 @@
   margin-left: auto;
 
   background-color: var(--color-old-price);
-  background-image: url('../src/images/about-us/about-us.jpg');
-  background-image: url('../src/images/about-us/about-us.webp');
+  background-image: url('../img/about-us/about-us.jpg');
+  background-image: url('../img/about-us/about-us.webp');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
 
-  @include bg-retina('../src/images/about-us/about-us@2x.jpg');
-  @include bg-retina('../src/images/about-us/about-us@2x.webp');
+  @include bg-retina('../img/about-us/about-us@2x.jpg');
+  @include bg-retina('../img/about-us/about-us@2x.webp');
 }

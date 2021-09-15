@@ -17,7 +17,7 @@
 
   &:focus,
   &:hover {
-    color: darken(#44c697, 1);
+    color: darken($color-accent, 2);
   }
 
   /* Furniture.test */
@@ -37,14 +37,12 @@
 }
 
 .logo__svg {
-  margin-right: 15px;
-
   @include transition;
   transition-property: fill;
 
-  &--white,
-  .logo:focus &,
-  .logo:hover & {
-    fill: currentColor;
-  }
+  // &--white,
+  // .logo:focus &,
+  // .logo:hover & {
+  //   fill: currentColor;
+  // }
 }

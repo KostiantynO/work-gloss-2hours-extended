@@ -2,6 +2,7 @@
 :root {
   --body-sans-serif: 'Montserrat', sans-serif;
   --brand-sans-serif: 'Cuprum', sans-serif;
+  --title-sans-serif: 'Blogger Sans', sans-serif;
   --color-text-primary: #1a202c;
   --color-accent: #ffd324;
   --color-white: #ffffff;
@@ -57,7 +58,7 @@ img {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: local("Montserrat"), url("../src/fonts/montserrat-v18-latin_cyrillic-regular.woff2") format("woff2"), url("../src/fonts/montserrat-v18-latin_cyrillic-regular.woff") format("woff");
+  src: local("Montserrat"), url("../fonts/montserrat-v18-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v18-latin_cyrillic-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -66,7 +67,7 @@ img {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: local("Montserrat Bold"), url("../src/fonts/montserrat-v18-latin_cyrillic-700.woff2") format("woff2"), url("../src/fonts/montserrat-v18-latin_cyrillic-700.woff") format("woff");
+  src: local("Montserrat Bold"), url("../fonts/montserrat-v18-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v18-latin_cyrillic-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -75,8 +76,32 @@ img {
   font-family: 'Cuprum';
   font-style: normal;
   font-weight: 400;
-  src: local("Cuprum"), url("../src/fonts/cuprum-v14-latin_cyrillic-regular.woff2") format("woff2"), url("../src/fonts/cuprum-v14-latin_cyrillic-regular.woff") format("woff");
+  src: local("Cuprum"), url("../fonts/cuprum-v14-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/cuprum-v14-latin_cyrillic-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* blogger-sans - latin 400 */
+@font-face {
+  font-family: 'Blogger Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Blogger Sans"), url("../../../fonts/blogger-sans.woff") format("woff");
+}
+
+/* blogger-sans - latin 500 */
+@font-face {
+  font-family: 'Blogger Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Blogger Sans"), url("../../../fonts/blogger-sans-medium.woff") format("woff");
+}
+
+/* blogger-sans - latin 700 */
+@font-face {
+  font-family: 'Blogger Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Blogger Sans"), url("../../../fonts/blogger-sans-bold.woff") format("woff");
 }
 
 html {
@@ -100,7 +125,6 @@ body {
   font-family: var(--body-sans-serif);
   font-size: 24px;
   line-height: 1.3;
-  letter-spacing: -1.1px;
   color: var(--color-text-primary);
   contain: content;
 }
@@ -138,16 +162,17 @@ body {
   }
 }
 
-/* Новинка! */
+/* ПЕКАРНЯ */
 .hero__title {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1;
-  /* 64 sp • H1 Headline */
-  color: var(--color-text-primary);
+  font-family: var(--title-sans-serif);
+  font-size: 130px;
+  line-height: 1.1;
+  /* /Desktop • 130 sp • H1 Headline,  lh: 143px */
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--color-accent);
+  text-transform: uppercase;
 }
 
-/* Ліжко Ornella */
 /* Категорії товарів */
 .section__title {
   margin-bottom: 50px;
@@ -156,7 +181,6 @@ body {
   font-weight: 700;
   line-height: 1.36;
   color: var(--color-text-primary);
-  /* color4 */
   transform: translateX(50%);
   transition-property: transform;
   transition: var(--time) var(--cubic);
@@ -168,7 +192,6 @@ body {
   transform: translateX(-50%);
   transition-property: transform;
   transition: var(--time) var(--cubic);
-  /* Rectangle 165 */
 }
 
 .section__title-text::before {
@@ -180,7 +203,6 @@ body {
   z-index: -1;
   width: 20px;
   background: var(--color-accent);
-  /* color3 */
 }
 
 @media screen and (min-width: 320px) {
@@ -211,7 +233,7 @@ body {
 }
 
 .social__link:focus, .social__link:hover {
-  color: #40c595;
+  color: #ffd11a;
 }
 
 .social__svg {
@@ -227,9 +249,8 @@ body {
 .page-header {
   position: absolute;
   width: 100%;
-  z-index: 1;
   padding-top: 14px;
-  font-weight: 700;
+  z-index: 1;
 }
 
 .page-header__container {
@@ -240,15 +261,67 @@ body {
   margin-right: 195px;
 }
 
-.top-nav__phones {
-  margin-right: 80px;
+.page-footer__logo {
+  margin-bottom: 50px;
+}
+
+.logo {
+  transition: var(--time) var(--cubic);
+  transition-property: color;
+  /* Furniture.test */
 }
 
 @media screen and (min-width: 320px) {
-  .phones {
+  .logo {
     display: flex;
     align-items: center;
   }
+}
+
+.logo--inverted {
+  color: var(--color-white);
+}
+
+.logo:focus, .logo:hover {
+  color: #ffd11a;
+}
+
+.logo__desc {
+  max-width: 220px;
+  contain: content;
+  height: 45px;
+  /* 36 sp • H3 Headline */
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.3px;
+}
+
+.logo__desc::first-letter {
+  color: var(--color-accent);
+}
+
+.logo__svg {
+  transition: var(--time) var(--cubic);
+  transition-property: fill;
+}
+
+/* ПЕКАРНЯ */
+.logo-text {
+  padding-top: 5px;
+  width: 175px;
+  height: 30px;
+  font-family: var(--title-sans-serif);
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 4px;
+  color: var(--color-white);
+  text-shadow: 1px 1px 0 var(--color-accent), 2px 2px 0 var(--color-white);
+}
+
+.top-nav__phones {
+  margin-right: 80px;
 }
 
 .phones__icon-smartphone {
@@ -261,9 +334,17 @@ body {
   position: relative;
 }
 
+/* (099) 999-99-99 */
 .phones__link {
   white-space: nowrap;
   color: var(--color-white);
+  /* Desktop • 34 sp • H4 Headline */
+  font-family: var(--title-sans-serif);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.25;
+  /* 42px */
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 .phones__sublink {
@@ -279,7 +360,7 @@ body {
 .phones__link:focus, .phones__link:hover,
 .phones__sublink:focus,
 .phones__sublink:hover {
-  color: #40c595;
+  color: #ffd11a;
 }
 
 .phones__submenu {
@@ -317,10 +398,6 @@ body {
   align-items: center;
 }
 
-.top-nav {
-  padding-bottom: 10px;
-}
-
 @media screen and (min-width: 320px) {
   .top-nav {
     display: flex;
@@ -341,21 +418,20 @@ body {
   }
 }
 
+/* Про компанію */
 .top-nav__link {
   position: relative;
-  width: 100%;
   color: var(--color-white);
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.25;
+  font-size: 23px;
+  line-height: 31px;
   letter-spacing: -1.4px;
-  text-transform: uppercase;
+  font-feature-settings: 'pnum' on, 'lnum' on;
   transition: var(--time) var(--cubic);
   transition-property: color;
 }
 
 .top-nav__link:focus, .top-nav__link:hover {
-  color: #40c595;
+  color: #ffd11a;
 }
 
 .top-nav__link::after, .top-nav__link--current::after {
@@ -467,7 +543,7 @@ body {
 }
 
 .furniture__link:focus, .furniture__link:hover {
-  color: #40c595;
+  color: #ffd11a;
 }
 
 .furniture__link--inverted {
@@ -527,59 +603,7 @@ body {
 }
 
 .furniture__sublink:focus, .furniture__sublink:hover {
-  color: #40c595;
-}
-
-.page-footer__logo {
-  margin-bottom: 50px;
-}
-
-.logo {
-  transition: var(--time) var(--cubic);
-  transition-property: color;
-  /* Furniture.test */
-}
-
-@media screen and (min-width: 320px) {
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.logo--inverted {
-  color: var(--color-white);
-}
-
-.logo:focus, .logo:hover {
-  color: #40c595;
-}
-
-.logo__desc {
-  max-width: 220px;
-  contain: content;
-  height: 45px;
-  /* 36 sp • H3 Headline */
-  font-size: 33px;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -1.3px;
-}
-
-.logo__desc::first-letter {
-  color: var(--color-accent);
-}
-
-.logo__svg {
-  margin-right: 15px;
-  transition: var(--time) var(--cubic);
-  transition-property: fill;
-}
-
-.logo__svg--white,
-.logo:focus .logo__svg,
-.logo:hover .logo__svg {
-  fill: currentColor;
+  color: #ffd11a;
 }
 
 @media screen and (min-width: 320px) {
@@ -596,7 +620,7 @@ body {
 }
 
 .order__link:focus, .order__link:hover {
-  color: #40c595;
+  color: #ffd11a;
 }
 
 @media screen and (min-width: 320px) {
@@ -611,6 +635,7 @@ body {
 }
 
 .order__svg {
+  margin-left: 10px;
   transition: var(--time) var(--cubic);
   transition-property: fill;
 }
@@ -629,26 +654,26 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 286px;
   max-width: 500px;
   max-height: 55px;
   padding: 15px 25px;
-  font-family: inherit;
+  font-family: var(--title-sans-serif);
   /* 18 sp • H5 Headline */
-  color: var(--color-text-primary);
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.25;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--color-text-primary);
   text-overflow: ellipsis;
-  text-transform: uppercase;
   word-wrap: break-word;
   background-color: var(--color-accent);
-  /* color3 */
   border: none;
   border-radius: 30px;
   box-shadow: 0 0 29px rgba(255, 249, 94, 0.54);
   transition: var(--time) var(--cubic);
   transition-property: transform, background-color;
-  /* Замовити дзвінок */
+  /* Асортимент */
 }
 
 .primary-btn:focus, .primary-btn:hover {
@@ -661,30 +686,27 @@ body {
 
 .hero {
   padding-top: 0;
-  background-color: var(--color-text-primary);
-  background-image: url("../img/hero-bg/hero-bg.jpg");
-  background-image: url("../img/hero-bg/hero-bg.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: center/cover no-repeat padding-box var(--color-text-primary);
+  background-image: linear-gradient(180deg, #000000 -1.44%, rgba(0, 0, 0, 0) 18.67%), linear-gradient(89.6deg, #000000 0.35%, rgba(0, 0, 0, 0) 50.92%), url("../img/hero-bg/hero-bg.jpg");
+  background-image: linear-gradient(180deg, #000000 -1.44%, rgba(0, 0, 0, 0) 18.67%), linear-gradient(89.6deg, #000000 0.35%, rgba(0, 0, 0, 0) 50.92%), url("../img/hero-bg/hero-bg.webp");
 }
 
 @media screen and (min-width: 320px) {
   .hero {
     max-width: 1920px;
-    min-height: 785px;
+    min-height: 940px;
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../img/hero-bg/hero-bg@2x.jpg");
+    background-image: linear-gradient(180deg, #000000 -1.44%, rgba(0, 0, 0, 0) 18.67%), linear-gradient(89.6deg, #000000 0.35%, rgba(0, 0, 0, 0) 50.92%), url("../img/hero-bg/hero-bg@2x.jpg");
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../img/hero-bg/hero-bg@2x.webp");
+    background-image: linear-gradient(180deg, #000000 -1.44%, rgba(0, 0, 0, 0) 18.67%), linear-gradient(89.6deg, #000000 0.35%, rgba(0, 0, 0, 0) 50.92%), url("../img/hero-bg/hero-bg@2x.webp");
   }
 }
 
@@ -692,62 +714,37 @@ body {
 .hero-wrapper {
   position: relative;
   max-width: 694px;
-  padding: 254px 74px 101px 75px;
-  text-align: center;
-  /* Rectangle 139 */
+  padding: 258px 74px 101px 0;
 }
 
-.hero-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 15px;
-  height: 100%;
-  background: var(--color-accent);
-  /* color3 */
-}
-
-.hero-wrapper__primary-btn {
-  margin-bottom: 50px;
-}
-
-.hero__title {
-  color: var(--color-accent);
-}
-
-@media screen and (min-width: 320px) {
-  .hero__title {
-    margin-bottom: 50px;
-  }
-}
-
-/* Ліжко Ornella */
+/* чудових ідей! */
 .hero__leading-text {
+  font-family: var(--title-sans-serif);
   font-size: 60px;
   font-weight: 500;
   line-height: 1.25;
-  text-transform: uppercase;
+  /* Desktop • 60 sp • H2 Headline */
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: var(--color-accent);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 29px rgba(255, 249, 94, 0.54);
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 320px) {
   .hero__leading-text {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 
-/* Це новий рівень комфортного сну */
+/* Найсвіжіша випічка власного виробництва на будь-який смак. Також у нас можна замовити домашні вареники, пельмені, короваї, листове тісто і багато іншого. */
 .hero__desc {
-  font-size: 21px;
+  width: 694px;
+  font-size: 23px;
   font-weight: 400;
-  line-height: 1.3;
-  color: var(--color-white);
+  line-height: 31px;
+  /* font-family: Proxima Nova; fs 24px, or 31px */
   font-feature-settings: 'pnum' on, 'lnum' on;
-  text-align: left;
+  color: var(--color-white);
 }
 
 @media screen and (min-width: 320px) {
@@ -1054,7 +1051,7 @@ body {
   .goods__item {
     margin-top: 50px;
     margin-left: 30px;
-    flex-basis: calc(100% / 3 - 30px);
+    flex-basis: calc(100% / 6 - 30px);
   }
 }
 
@@ -1185,8 +1182,8 @@ body {
   height: 675px;
   margin-left: auto;
   background-color: var(--color-old-price);
-  background-image: url("../src/images/about-us/about-us.jpg");
-  background-image: url("../src/images/about-us/about-us.webp");
+  background-image: url("../img/about-us/about-us.jpg");
+  background-image: url("../img/about-us/about-us.webp");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
@@ -1194,13 +1191,13 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .about-us__background {
-    background-image: url("../src/images/about-us/about-us@2x.jpg");
+    background-image: url("../img/about-us/about-us@2x.jpg");
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .about-us__background {
-    background-image: url("../src/images/about-us/about-us@2x.webp");
+    background-image: url("../img/about-us/about-us@2x.webp");
   }
 }
 
@@ -1259,8 +1256,8 @@ body {
   min-width: 1561px;
   min-height: 675px;
   background-color: var(--color-old-price);
-  background-image: url("../src/images/consultancy/consultancy-1.jpg");
-  background-image: url("../src/images/consultancy/consultancy-1.webp");
+  background-image: url("../img/consultancy/consultancy-1.jpg");
+  background-image: url("../img/consultancy/consultancy-1.webp");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
@@ -1268,13 +1265,13 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .consultancy__background {
-    background-image: url("../src/images/consultancy/consultancy-1@2x.jpg");
+    background-image: url("../img/consultancy/consultancy-1@2x.jpg");
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .consultancy__background {
-    background-image: url("../src/images/consultancy/consultancy-1@2x.webp");
+    background-image: url("../img/consultancy/consultancy-1@2x.webp");
   }
 }
 
@@ -1339,17 +1336,13 @@ body {
 
 .consultancy__label-text {
   position: absolute;
+  bottom: 100%;
+  left: 0%;
   padding: 14px 15px;
   opacity: 0.6;
   /* color4 */
   transition-property: transform, opacity, color;
   transition: var(--time) var(--cubic);
-}
-
-.consultancy__input:focus + .consultancy__label-text,
-.consultancy__input:not(:placeholder-shown) + .consultancy__label-text {
-  font-size: 12px;
-  transform: translate(-5px, calc(-68%));
 }
 
 .consultancy__input:focus + .consultancy__label-text {
@@ -1384,7 +1377,7 @@ body {
 }
 
 .consultancy__input:focus {
-  box-shadow: 0 0 3px 2px rgba(68, 198, 151, 0.5);
+  box-shadow: 0 0 3px 2px rgba(255, 211, 36, 0.5);
 }
 
 .consultancy__btn-wrapper {
@@ -1396,6 +1389,122 @@ body {
 
 .consultancy__submit-btn {
   transform: translateX(-50%);
+}
+
+.order-now__container {
+  padding: 0;
+}
+
+/* Rectangle 174 */
+.order-now__background {
+  background-color: var(--color-old-price);
+  background-image: url("../img/order-now/order-now.jpg");
+  background-image: url("../img/order-now/order-now.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1920px 541px;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .order-now__background {
+    background-image: url("../img/order-now/order-now@2x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .order-now__background {
+    background-image: url("../img/order-now/order-now@2x.webp");
+  }
+}
+
+.order-now__wrapper {
+  width: 1234px;
+  margin: 0 auto;
+}
+
+.order-now__wrapper::before {
+  /* Rectangle 176 */
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: var(--color-accent);
+  /* color3 */
+  border-radius: 3px 0 0 3px;
+}
+
+.order-now__form {
+  display: flex;
+}
+
+.order-now__group {
+  display: flex;
+}
+
+/* Ваше ім’я* */
+.order-now__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-now__label:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.order-now__label-text {
+  position: absolute;
+  bottom: 100%;
+  left: 0%;
+  padding: 14px 15px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--color-white);
+  opacity: 0.6;
+  transition-property: transform, opacity, color;
+  transition: var(--time) var(--cubic);
+}
+
+.order-now__input:focus + .order-now__label-text {
+  color: var(--color-accent);
+}
+
+/* Rectangle 176 */
+.order-now__input {
+  min-height: 51px;
+  padding: 14px 15px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  /* 22px */
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--color-white);
+  background-color: transparent;
+  border: 1px solid var(--color-text-primary);
+  border-radius: 3px;
+  /* Леонардо Ді Капріо */
+}
+
+.order-now__input::placeholder {
+  color: var(--color-white);
+  transition-property: opacity;
+  transition: var(--time) var(--cubic);
+}
+
+.order-now__input:focus::placeholder {
+  opacity: 0;
+}
+
+.order-now__input:focus {
+  box-shadow: 0 0 3px 2px rgba(255, 211, 36, 0.5);
+}
+
+.highlight {
+  color: var(--color-accent);
 }
 
 .to-top-btn-wrapper {
@@ -1424,21 +1533,14 @@ body {
 }
 
 .page-footer__content {
-  position: relative;
+  display: flex;
 }
 
 /* Rectangle 176 */
 .page-footer__background {
-  position: relative;
-  top: 0;
-  left: 51px;
-  margin-left: auto;
-  width: 1089px;
-  height: 520px;
-  background: url(illustration-of-the-living-room-interior.jpg);
   background-color: var(--color-text-primary);
-  background-image: url("../src/images/footer-bg/footer-bg.jpg");
-  background-image: url("../src/images/footer-bg/footer-bg.webp");
+  background-image: url("../img/map/map.jpg");
+  background-image: url("../img/map/map.webp");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
@@ -1446,21 +1548,18 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .page-footer__background {
-    background-image: url("../src/images/footer-bg/footer-bg@2x.jpg");
+    background-image: url("../img/map/map@2x.jpg");
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .page-footer__background {
-    background-image: url("../src/images/footer-bg/footer-bg@2x.webp");
+    background-image: url("../img/map/map@2x.webp");
   }
 }
 
 /* Rectangle 180 */
 .page-footer__left {
-  position: absolute;
-  top: 0;
-  left: -51px;
   display: flex;
   flex-direction: column;
   padding: 50px 51px 15px;
@@ -1538,7 +1637,11 @@ body {
 }
 
 .address__link:focus, .address__link:hover {
-  color: #40c595;
+  color: #ffd11a;
+}
+
+.open-hours {
+  align-items: flex-start;
 }
 
 .address__svg {
@@ -1558,11 +1661,11 @@ body {
 
 .address__icon-smartphone {
   fill: var(--color-text-primary);
-  stroke: var(--color-accent);
+  stroke: var(--color-white);
 }
 
 .address-phones__link {
-  color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .page-footer__social {

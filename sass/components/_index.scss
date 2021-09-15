@@ -8,7 +8,9 @@
 
 @import './page-header/page-header';
 @import './page-header/page-header__container/page-header__container';
-@import './page-header/top-nav/page-header__logo';
+@import './page-header/page-header__logo/page-header__logo';
+@import './shared/logo/logo';
+@import './shared/logo/logo-text';
 
 @import './page-header/top-nav/phones/phones';
 @import './page-header/top-nav/phones/phones__svg';
@@ -35,8 +37,6 @@
 @import './page-header/bottom-row/primary-nav/furniture/furniture__submenu';
 @import './page-header/bottom-row/primary-nav/furniture/furniture__sublink';
 
-@import './page-header/bottom-row/primary-nav/logo/logo';
-
 @import './page-header/bottom-row/order/order';
 @import './page-header/bottom-row/order/order__link';
 @import './page-header/bottom-row/order/order__cart';
@@ -48,7 +48,6 @@
 // Hero
 @import './hero/hero';
 @import './hero/hero-wrapper';
-@import './hero/hero__title';
 @import './hero/hero__leading-text';
 @import './hero/hero__desc';
 
@@ -107,6 +106,16 @@
 @import './consultancy/consultancy__form/consultancy__label';
 @import './consultancy/consultancy__form/consultancy__input';
 @import './consultancy/consultancy__form/consultancy__submit-btn';
+
+// Order now
+@import './order-now/order-now';
+@import './order-now/order-now__background';
+@import './order-now/order-now__wrapper';
+@import './order-now/order-now__form';
+@import './order-now/order-now__group';
+@import './order-now/order-now__label';
+@import './order-now/order-now__input';
+@import './order-now/highlight';
 
 // --------------- FOOTER ---------------
 // Footer - To top button

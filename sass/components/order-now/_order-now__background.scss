@@ -1,0 +1,12 @@
+/* Rectangle 174 */
+.order-now__background {
+  background-color: var(--color-old-price);
+  background-image: url('../img/order-now/order-now.jpg');
+  background-image: url('../img/order-now/order-now.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1920px 541px;
+
+  @include bg-retina('../img/order-now/order-now@2x.jpg');
+  @include bg-retina('../img/order-now/order-now@2x.webp');
+}

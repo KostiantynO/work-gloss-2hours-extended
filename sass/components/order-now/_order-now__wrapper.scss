@@ -1,0 +1,18 @@
+.order-now__wrapper {
+  width: 1234px;
+  margin: 0 auto;
+
+  &::before {
+    /* Rectangle 176 */
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0;
+
+    width: 15px;
+    height: 100%;
+
+    background: var(--color-accent); /* color3 */
+    border-radius: 3px 0 0 3px;
+  }
+}

@@ -1,19 +1,21 @@
-/* Новинка! */
+/* ПЕКАРНЯ */
 .hero__title {
-  @include fz(64px, 700, 1); /* 64 sp • H1 Headline */
-  color: var(--color-text-primary);
+  font-family: var(--title-sans-serif);
+  @include fz(130px, null, 1.1); /* /Desktop • 130 sp • H1 Headline,  lh: 143px */
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
+  color: var(--color-accent);
+  text-transform: uppercase;
 }
 
-/* Ліжко Ornella */
-.goods__name {
-}
+// .goods__name { }
 
 /* Категорії товарів */
 .section__title {
   margin-bottom: 50px;
   /* Montserrat - fs: 44px, lh:1.36; Proxima Nova - 48 sp • H2 Headline, 60 px*/
   @include fz(44px, 700, 1.36);
-  color: var(--color-text-primary); /* color4 */
+  color: var(--color-text-primary);
 
   transform: translateX(50%);
   transition-property: transform;
@@ -27,7 +29,6 @@
     transition-property: transform;
     @include transition;
 
-    /* Rectangle 165 */
     &::before {
       content: '';
       position: absolute;
@@ -37,7 +38,7 @@
       z-index: -1;
 
       width: 20px;
-      background: var(--color-accent); /* color3 */
+      background: var(--color-accent);
     }
   }
 }

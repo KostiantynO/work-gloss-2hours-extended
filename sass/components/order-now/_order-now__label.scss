@@ -1,0 +1,31 @@
+/* Ваше ім’я* */
+.order-now__label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &-text {
+    position: absolute;
+    bottom: 100%;
+    left: 0%;
+
+    padding: 14px 15px;
+
+    @include fz(20px, 400, 1.5);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: var(--color-white);
+
+    opacity: 0.6;
+    transition-property: transform, opacity, color;
+    @include transition;
+
+    .order-now__input:focus + & {
+      color: var(--color-accent);
+    }
+  }
+}

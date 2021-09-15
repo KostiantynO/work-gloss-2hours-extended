@@ -10,16 +10,13 @@
 
   &-text {
     position: absolute;
+    bottom: 100%;
+    left: 0%;
+
     padding: 14px 15px;
     opacity: 0.6; /* color4 */
     transition-property: transform, opacity, color;
     @include transition;
-
-    .consultancy__input:focus + &,
-    .consultancy__input:not(:placeholder-shown) + & {
-      font-size: 12px;
-      transform: translate(-5px, calc(-68%));
-    }
 
     .consultancy__input:focus + & {
       color: var(--color-accent);

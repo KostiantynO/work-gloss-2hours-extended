@@ -11,6 +11,10 @@
 
   &:focus,
   &:hover {
-    color: darken(#44c697, 1);
+    color: darken($color-accent, 2);
   }
+}
+
+.open-hours {
+  align-items: flex-start;
 }

@@ -4,9 +4,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Montserrat'),
-    url('../src/fonts/montserrat-v18-latin_cyrillic-regular.woff2') format('woff2'),
+    url('../fonts/montserrat-v18-latin_cyrillic-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../src/fonts/montserrat-v18-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url('../fonts/montserrat-v18-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* montserrat-700 - latin_cyrillic */
@@ -15,9 +15,9 @@
   font-style: normal;
   font-weight: 700;
   src: local('Montserrat Bold'),
-    url('../src/fonts/montserrat-v18-latin_cyrillic-700.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../src/fonts/montserrat-v18-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/montserrat-v18-latin_cyrillic-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/montserrat-v18-latin_cyrillic-700.woff')
+      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* cuprum-regular - latin_cyrillic */
@@ -25,7 +25,31 @@
   font-family: 'Cuprum';
   font-style: normal;
   font-weight: 400;
-  src: local('Cuprum'), url('../src/fonts/cuprum-v14-latin_cyrillic-regular.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../src/fonts/cuprum-v14-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Cuprum'), url('../fonts/cuprum-v14-latin_cyrillic-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/cuprum-v14-latin_cyrillic-regular.woff')
+      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* blogger-sans - latin 400 */
+@font-face {
+  font-family: 'Blogger Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Blogger Sans'), url('../../../fonts/blogger-sans.woff') format('woff');
+}
+
+/* blogger-sans - latin 500 */
+@font-face {
+  font-family: 'Blogger Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Blogger Sans'), url('../../../fonts/blogger-sans-medium.woff') format('woff');
+}
+
+/* blogger-sans - latin 700 */
+@font-face {
+  font-family: 'Blogger Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Blogger Sans'), url('../../../fonts/blogger-sans-bold.woff') format('woff');
 }
