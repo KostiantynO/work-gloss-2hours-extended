@@ -300,8 +300,6 @@ body {
 
 /* ПЕКАРНЯ */
 .logo-text {
-  width: 175px;
-  height: 30px;
   font-family: var(--title-sans-serif);
   font-size: 37px;
   font-weight: 700;
