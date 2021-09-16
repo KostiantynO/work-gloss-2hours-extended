@@ -1,20 +1,49 @@
-/* Rectangle 174 */
 .about-us__background {
   position: relative;
   top: 0;
-  left: 51px;
+  left: 0;
 
-  width: 1407px;
-  height: 675px;
-  margin-left: auto;
+  width: 760px;
+  height: 662px;
+  @include mq($mobile, $ml: 632px, $mb: 28px);
 
-  background-color: var(--color-old-price);
-  background-image: url('../img/about-us/about-us.jpg');
-  background-image: url('../img/about-us/about-us.webp');
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
+  background: center/cover no-repeat var(--color-text-primary);
+  background-image: url('../img/about-us/about-us-1.jpg');
+  background-image: url('../img/about-us/about-us-1.webp');
 
-  @include bg-retina('../img/about-us/about-us@2x.jpg');
-  @include bg-retina('../img/about-us/about-us@2x.webp');
+  @include bg-retina('../img/about-us/about-us-1@2x.jpg');
+  @include bg-retina('../img/about-us/about-us-1@2x.webp');
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 100%;
+
+    width: 444px;
+    height: 316px;
+    margin-left: 30px;
+    content: '';
+  }
+
+  &::before {
+    top: 0;
+
+    background: center/cover no-repeat var(--color-text-primary);
+    background-image: url('../img/about-us/about-us-2.jpg');
+    background-image: url('../img/about-us/about-us-2.webp');
+
+    @include bg-retina('../img/about-us/about-us-2@2x.jpg');
+    @include bg-retina('../img/about-us/about-us-2@2x.webp');
+  }
+
+  &::after {
+    top: calc(50% + 15px);
+
+    background: center/cover no-repeat var(--color-text-primary);
+    background-image: url('../img/about-us/about-us-3.jpg');
+    background-image: url('../img/about-us/about-us-3.webp');
+
+    @include bg-retina('../img/about-us/about-us-3@2x.jpg');
+    @include bg-retina('../img/about-us/about-us-3@2x.webp');
+  }
 }

@@ -2,11 +2,9 @@
   padding: 15px;
 
   @include mq($mobile) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    text-align: center;
   }
 
-  transition-property: color, background-color;
   @include transition;
+  transition-property: color, background-color;
 }

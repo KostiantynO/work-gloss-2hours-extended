@@ -4,6 +4,7 @@
   --brand-sans-serif: 'Cuprum', sans-serif;
   --title-sans-serif: 'Blogger Sans', sans-serif;
   --color-text-primary: #1a202c;
+  --color-filter-btn: #2d3748;
   --color-accent: #ffd324;
   --color-white: #ffffff;
   --color-discount: #ff1b1b;
@@ -720,31 +721,80 @@ body {
   display: flex;
 }
 
-/* Rectangle 174 */
 .about-us__background {
   position: relative;
   top: 0;
-  left: 51px;
-  width: 1407px;
-  height: 675px;
-  margin-left: auto;
-  background-color: var(--color-old-price);
-  background-image: url("../img/about-us/about-us.jpg");
-  background-image: url("../img/about-us/about-us.webp");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
+  left: 0;
+  width: 760px;
+  height: 662px;
+  background: center/cover no-repeat var(--color-text-primary);
+  background-image: url("../img/about-us/about-us-1.jpg");
+  background-image: url("../img/about-us/about-us-1.webp");
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media screen and (min-width: 320px) {
   .about-us__background {
-    background-image: url("../img/about-us/about-us@2x.jpg");
+    margin-bottom: 28px;
+    margin-left: 632px;
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .about-us__background {
-    background-image: url("../img/about-us/about-us@2x.webp");
+    background-image: url("../img/about-us/about-us-1@2x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .about-us__background {
+    background-image: url("../img/about-us/about-us-1@2x.webp");
+  }
+}
+
+.about-us__background::before, .about-us__background::after {
+  position: absolute;
+  left: 100%;
+  width: 444px;
+  height: 316px;
+  margin-left: 30px;
+  content: '';
+}
+
+.about-us__background::before {
+  top: 0;
+  background: center/cover no-repeat var(--color-text-primary);
+  background-image: url("../img/about-us/about-us-2.jpg");
+  background-image: url("../img/about-us/about-us-2.webp");
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .about-us__background::before {
+    background-image: url("../img/about-us/about-us-2@2x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .about-us__background::before {
+    background-image: url("../img/about-us/about-us-2@2x.webp");
+  }
+}
+
+.about-us__background::after {
+  top: calc(50% + 15px);
+  background: center/cover no-repeat var(--color-text-primary);
+  background-image: url("../img/about-us/about-us-3.jpg");
+  background-image: url("../img/about-us/about-us-3.webp");
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .about-us__background::after {
+    background-image: url("../img/about-us/about-us-3@2x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .about-us__background::after {
+    background-image: url("../img/about-us/about-us-3@2x.webp");
   }
 }
 
@@ -788,12 +838,17 @@ body {
   text-transform: uppercase;
 }
 
+.goods__title {
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 320px) {
   .goods-filter {
-    padding-bottom: 87px;
+    padding-right: 158px;
+    padding-bottom: 40px;
+    padding-left: 158px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1602px;
   }
 }
 
@@ -801,7 +856,8 @@ body {
   .goods-filter__list {
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
   }
 }
 
@@ -814,35 +870,28 @@ body {
 }
 
 .goods-filter__btn {
-  position: relative;
-  transition-property: color, background-color;
-  transition: var(--time) var(--cubic);
-}
-
-.goods-filter__btn::after, .goods-filter__btn--current::after {
-  content: '';
-  position: absolute;
   display: block;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 3px;
+  padding: 15px 25px;
+  font-family: var(--title-sans-serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--color-filter-btn);
+  text-align: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-accent);
+  border-radius: 30px;
+  box-shadow: none;
+  transition-property: background-color, border-color;
+}
+
+.goods-filter__btn:focus, .goods-filter__btn:hover, .goods-filter__btn--current {
   background-color: var(--color-accent);
-  /* color3 */
-  transition-property: transform;
-  transition: var(--time) var(--cubic);
 }
 
-.goods-filter__btn::after {
-  transform: scaleX(0);
-}
-
-.goods-filter__btn:focus::after, .goods-filter__btn:hover::after, .goods-filter__btn.goods-filter__btn--current::after {
-  transform: scaleX(100%);
-}
-
-.goods-filter__btn--current {
-  color: var(--color-accent);
+.goods-filter__btn:focus, .goods-filter__btn:hover {
+  box-shadow: 0 0 29px rgba(255, 249, 94, 0.54);
 }
 
 .goods-filter__svg {
@@ -855,19 +904,6 @@ body {
 .goods-filter__btn:focus .goods-filter__svg,
 .goods-filter__btn:hover .goods-filter__svg {
   fill: var(--color-accent);
-}
-
-/* Дивани */
-.goods-filter__title {
-  /* 22px for Montserrat, 24px for Proxima Nova, 24sp • H4 Headline 30px */
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.25;
-  height: 30px;
-  color: var(--color-text-primary);
-  /* color4 */
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .goods__gallery {
@@ -946,53 +982,33 @@ body {
 
 .goods__meta {
   padding: 15px;
-  transition-property: color, background-color;
   transition: var(--time) var(--cubic);
+  transition-property: color, background-color;
 }
 
 @media screen and (min-width: 320px) {
   .goods__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    text-align: center;
   }
 }
 
-/* Ліжко Рамона */
+/* Вареники з картоплею */
 .goods__name {
-  margin-right: auto;
-  font-size: 24px;
+  font-family: var(--title-sans-serif);
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.25;
-  /* 24sp • H4 Headline */
-  text-align: center;
-  text-transform: uppercase;
+  color: var(--color-text-primary);
 }
 
-/* 8 999 грн (Normal price) */
+/* 40 грн/кг */
 .goods__price {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 1.25;
-  /* 24sp • H4 Headline, lh: 30px */
   color: var(--color-text-primary);
-  /* color4 */
-  text-align: center;
-  text-transform: uppercase;
   transition-property: color;
   transition: var(--time) var(--cubic);
-}
-
-.goods__price--current {
-  margin-right: 10px;
-  color: var(--color-discount);
-}
-
-.goods__price--previous {
-  text-decoration-line: line-through;
-  font-size: 18px;
-  color: var(--color-old-price);
-  /* color2 */
 }
 
 .goods__btn-wrapper {
